@@ -35,12 +35,12 @@ const props = defineProps({
                 <h3 class="font-[Nunito] text-lg text-[#604646]">{{ nombre_usuario }}</h3>
             </div>
 
-            <p class="font-[Nunito] text-sm text-gray-500">{{ hora }}</p>
+            <p class="font-[Nunito] text-sm text-[#604646]">{{ hora }}</p>
 
         </div>
 
-        <p class="text-gray-600 m-b-5">{{ contenido }}</p>
-        <hr class=" border-gray-300 my-2" />
+        <p class="text-[#604646] m-b-5">{{ contenido }}</p>
+        <hr class="my-4 border-[#FF7608] border-1 rounded-[2rem] m-5" />
     </div>
 
 </template>

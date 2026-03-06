@@ -3,7 +3,10 @@ import { RouterLink } from 'vue-router'
 import BarraBusqueda from '@/components/BarraBusqueda.vue'
 import BotonBase from '@/components/BotonBase.vue'
 import PreviewChat from '@/components/PreviewChat.vue';
-
+import Footer from '@/components/Footer.vue';
+import SeccionChats from '@/components/SeccionChats.vue';
+import MensajeRecibido from '@/components/MensajeRecibido.vue'
+import MensajeEnviado from '@/components/MensajeEnviado.vue'  
 </script>
 
 <template>
@@ -24,7 +27,7 @@ import PreviewChat from '@/components/PreviewChat.vue';
           <i class="bi bi-caret-right-fill"></i>
         </div>
 
-        <div class="flex flex-col gap-2 overflow-y-auto max-h-[600px]">
+        <div class="flex flex-col gap-2 overflow-y-auto max-h-[500px]">
           <PreviewChat foto_perfil="/foto perfil.png" nombre_usuario="Usuario" hora="12:00 PM"
             contenido="Lorem ipsum dolor sit am..." />
           <PreviewChat foto_perfil="/foto perfil.png" nombre_usuario="Usuario" hora="12:00 PM"
@@ -35,7 +38,11 @@ import PreviewChat from '@/components/PreviewChat.vue';
             contenido="Lorem ipsum dolor sit am..." />
           <PreviewChat foto_perfil="/foto perfil.png" nombre_usuario="Usuario" hora="12:00 PM"
             contenido="Lorem ipsum dolor sit am..." />
-        
+          <PreviewChat foto_perfil="/foto perfil.png" nombre_usuario="Usuario" hora="12:00 PM"
+            contenido="Lorem ipsum dolor sit am..." />
+
+
+
         </div>
       </aside>
 

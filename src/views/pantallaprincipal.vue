@@ -33,7 +33,7 @@ import Footer from '@/components/Footer.vue'
                 <div>
                     <button class="text-[#604646] bg-[#FFEBC9] font-[Nunito] text-xl py-3 px-6 rounded-full text-xl transition-all 
                 shadow-md active:scale-95 transition-transform duration-300 hover:scale-110">Ver recompensas</button>
-                </div> <!--*Cambiar color default-->
+                </div>
             </div>
 
             <br>

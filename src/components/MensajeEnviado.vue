@@ -16,15 +16,16 @@ const props = defineProps({
 
 
 <template>
-    <div class="p-2 m-1 w-full h-full flex flex-col items-end bg-[#604646] rounded-[2rem] shadow-sm">
+    <div class="p-2 w-full  flex flex-col justify-end">
 
-        <p class="text-gray-600 m-b-5 bg-[#FF7608] text-white p-3 rounded-full shadow-sm">{{ contenido }}</p>
-        <div class="flex justify-between items-center gap-4">
+        <div class="flex items-end gap-4 flex-row-reverse">
 
-            <div class="flex items center gap-4">
-                <img :src="foto_perfil" alt="Foto de perfil" class="h-9 w-9 rounded-full" />
+            <img :src="foto_perfil" alt="Foto de perfil" class="h-9 w-9 rounded-full flex-shrink-0" />
+
+            <div class="bg-[#604646] rounded-[1rem] p-2 max-w-[50%] flex flex-col">
+                <p class="text-white m-b-5 break-words whitespace-pre-wrap leading-relaxe">{{ contenido }}</p>
             </div>
-        </div>
 
+        </div>
     </div>
 </template>

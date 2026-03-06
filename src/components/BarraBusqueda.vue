@@ -11,7 +11,7 @@ import { RouterLink } from 'vue-router'
     </RouterLink>
 
 
-    <div class="search-container w-[1200px] relative">
+    <div class="search-container w-[800px] relative">
       <input
         class="w-full rounded-full border-none bg-[#FDF0D9] p-3 text-center outline-none placeholder:text-[#604646]/50 shadow-sm font-[Nunito_Sans] text-xl text-[#604646]"
         type="text" placeholder="Buscar..." />
@@ -27,11 +27,12 @@ import { RouterLink } from 'vue-router'
         </div>
       </RouterLink>
 
-      <button class="icon-btn" title="Chats">
+      
+      <RouterLink to="/chats" class="icon-btn" title="Chats">
         <div class="h-8 w-8 bg-[#FF7608]"
           style="mask-image: url('/Iconos/chat.svg'); mask-repeat: no-repeat; mask-size: contain; -webkit-mask-image: url('/Iconos/chat.svg'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat;">
         </div>
-      </button>
+      </RouterLink>
 
       <RouterLink to="/perfil" class="icon-btn" title="Perfil">
         <div class="h-8 w-8 bg-[#FF7608]"

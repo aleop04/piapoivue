@@ -65,8 +65,7 @@ const showLogin = ref(false)
         </form>
 
         <br>
-        <button @click="showLogin = false" class="font-[Nunito] text-xs mt-4 text-[#604646] underline" >¿No tienes una cuenta? Regístrate
-          aquí</button>
+        <button @click="showLogin = false" class="font-[Nunito] text-xs mt-4 text-[#604646] underline" > <router-link to="/registro" class="font-bold underline"> ¿No tienes una cuenta? Regístrate aquí</router-link></button>
       </div>
 
     </Transition>

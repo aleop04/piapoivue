@@ -4,7 +4,7 @@ import { defineProps } from 'vue';
 const props = defineProps({
   imagen: {
     type: String,
-    required: true, // Obligatorio
+    required: true, 
   },
 
   titulo: {
