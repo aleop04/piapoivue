@@ -13,7 +13,7 @@ import { RouterLink } from 'vue-router'
 
     <div class="search-container w-[1200px] relative">
       <input
-        class="w-full rounded-full border-none bg-[#FDF0D9] p-3 text-center outline-none placeholder:text-[#604646]/50 shadow-sm font-[Nunito] text-xl text-[#604646]"
+        class="w-full rounded-full border-none bg-[#FDF0D9] p-3 text-center outline-none placeholder:text-[#604646]/50 shadow-sm font-[Nunito_Sans] text-xl text-[#604646]"
         type="text" placeholder="Buscar..." />
 
     </div>
