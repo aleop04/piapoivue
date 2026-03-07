@@ -44,6 +44,26 @@ const router = createRouter({
       name: 'agregar',
       component: () => import('../views/pantallaagregarpub.vue'),
     },
+    {
+      path: '/pantallaresultado',
+      name: 'pantallaresultado',
+      component: () => import('@/views/pantallaresultado.vue')
+    },
+    {
+      path: '/pantallapublicacion',
+      name: 'pantallapublicacion',
+      component: () => import('@/views/pantallapublicacion.vue')
+    },
+    {
+      path: '/pantallarecompensas',
+      name: 'pantallarecompensas',
+      component: () => import('@/views/pantallarecompensas.vue')
+    },
+    {
+      path: '/pantallapublicacionperfil',
+      name: 'pantallapublicacionperfil',
+      component: () => import('@/views/pantallapublicacionperfil.vue')
+    },
   ],
 })
 

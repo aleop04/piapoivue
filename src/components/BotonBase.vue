@@ -26,7 +26,7 @@ const emit = defineEmits(['click'])
   <button 
     @click="emit('click')"
     :class="[
-      'text-white font-[Nunito] text-xl py-3 px-10 rounded-full text-xl transition-all shadow-md active:scale-95',
+      'text-white font-[Nunito_Sans] text-xl py-4 px-12 rounded-full text-xl transition-all shadow-md active:scale-95',
       customClass
     ]">
     {{ text }}

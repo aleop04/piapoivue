@@ -32,8 +32,8 @@ const showLogin = ref(false)
 
         <BotonBase text="Iniciar Sesión"  @click="showLogin = true" />
 
-        <div class="font-[Nunito] absolute bottom-0 bg-[#FFEBC9] py-12 px-40 rounded-t-3xl">
-          <p class="text-[#604646] text-xl">
+        <div class="font-bold[Nunito_Sans] absolute bottom-0 bg-[#FFEBC9] py-12 px-40 rounded-t-3xl">
+          <p class="text-[#604646] text-xl transform scale-150 font-bold">
             ¿No tienes una cuenta? <br>
             <router-link to="/registro" class="font-bold underline">Regístrate aquí</router-link>
           </p>

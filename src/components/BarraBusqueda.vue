@@ -1,5 +1,19 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+import { ref } from 'vue'
+import { RouterLink, useRouter } from 'vue-router'
+
+const router = useRouter()
+const busqueda = ref('')
+
+const buscar = () => {
+  if (!busqueda.value.trim()) return
+
+  router.push({
+    path: '/pantallaresultado',
+    query: { q: busqueda.value }
+  })
+}
+
 </script>
 
 <template>
@@ -13,9 +27,12 @@ import { RouterLink } from 'vue-router'
 
     <div class="search-container w-[800px] relative">
       <input
+        v-model="busqueda"
+        @keyup.enter="buscar"
         class="w-full rounded-full border-none bg-[#FDF0D9] p-3 text-center outline-none placeholder:text-[#604646]/50 shadow-sm font-[Nunito_Sans] text-xl text-[#604646]"
-        type="text" placeholder="Buscar..." />
-
+        type="text"
+        placeholder="Buscar..."
+      />
     </div>
 
 

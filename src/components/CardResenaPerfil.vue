@@ -32,7 +32,7 @@ const props = defineProps({
 
 <template>
   <RouterLink 
-    to="/pantallapublicacion"
+    to="/pantallapublicacionperfil"
     class="bg-[#FDF0D9] rounded-[2rem] shadow-sm p-5 max-w-sm flex flex-col gap-4 transition-transform duration-300 hover:scale-110 cursor-pointer"
   > 
 

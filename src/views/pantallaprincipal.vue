@@ -31,8 +31,12 @@ import Footer from '@/components/Footer.vue'
                     <p class="items-center justify-center font-[Nunito] text-5xl font-bold">100</p>
                 </div>
                 <div>
-                    <button class="text-[#604646] bg-[#FFEBC9] font-[Nunito] text-xl py-3 px-6 rounded-full text-xl transition-all 
-                shadow-md active:scale-95 transition-transform duration-300 hover:scale-110">Ver recompensas</button>
+                <router-link to="/pantallarecompensas">
+                    <button
+                        class="text-[#604646] bg-[#FFEBC9] font-[Nunito] text-xl py-3 px-6 rounded-full shadow-md active:scale-95 transition-transform duration-300 hover:scale-110 cursor-pointer">
+                        Ver recompensas
+                    </button>
+                </router-link>
                 </div>
             </div>
 

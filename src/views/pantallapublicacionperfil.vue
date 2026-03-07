@@ -9,12 +9,13 @@ import { ref } from 'vue'
 
 const mostrarMensaje = ref(false)
 
-const subirActividad = () => {
+const realizarCambios = () => {
   mostrarMensaje.value = true
 }
 const cerrarMensaje = () => {
   mostrarMensaje.value = false
 }
+
 </script>
 
 <template>
@@ -26,15 +27,14 @@ const cerrarMensaje = () => {
   <!-- lo k va adentro -->
   <main class="flex-grow w-full flex flex-col items-center p-10 pb-32">
 
-  <div class="relative group w-[1600px] max-w-full h-[739px] rounded-[25px] bg-[#FF7608] flex items-center justify-center cursor-pointer">
+    <div class="relative group w-[1600px] max-w-full h-[739px] rounded-[25px] bg-[#FF7608] flex items-center justify-center cursor-pointer">
+        <!-- texto que aparece al pasar el mouse -->
+        <span class="opacity-0 group-hover:opacity-100 text-white text-4xl font-bold transition">
+        Subir foto
+        </span>
+    </div>
 
-    <!-- texto que aparece al pasar el mouse -->
-    <span class="opacity-0 group-hover:opacity-100 text-white text-4xl font-bold transition">
-      Subir foto
-    </span>
-  </div>
-
-  <div class="relative -top-27 z-10">
+    <div class="relative -top-27 z-10">
     <actividadporhacereditable />
   </div>
   
@@ -52,11 +52,11 @@ const cerrarMensaje = () => {
   <div class="flex items-center gap-[85px] p-16">
     <!-- botón subir actividad -->
     <button
-      @click="subirActividad"
+      @click="realizarCambios"
       type="button"
       class="w-[314px] h-[72px] bg-[#FF7608] rounded-[50px] shadow-md text-[#FFEBC9] text-[32px] font-bold font-['Nunito_Sans'] flex items-center justify-center cursor-pointer hover:brightness-110 transition"
     >
-      Subir actividad
+      Realizar cambios
     </button>
   </div>
 
@@ -65,7 +65,7 @@ const cerrarMensaje = () => {
   <!-- Footer -->
   <Footer />
 
-  <div
+<div
   v-if="mostrarMensaje"
   @click="cerrarMensaje"
   class="fixed inset-0 bg-black/40 flex items-center justify-center z-50"
@@ -79,7 +79,7 @@ const cerrarMensaje = () => {
       class="w-[641px] text-center text-white text-[40px]
              font-extrabold font-['Nunito_Sans']"
     >
-      ¡Gracias por compartir una actividad! Ganaste 50 puntos
+      ¡Cambios realizados!
     </div>
   </div>
 
