@@ -1,83 +1,111 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-import BotonBase from '@/components/BotonBase.vue'
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#FFEBC9] flex flex-col md:flex-row items-center justify-center p-8 gap-10">
+  <section class="relative min-h-screen w-full overflow-hidden bg-[#FFF1D9]">
 
-    <div class="flex flex-col items-center md:items-start max-w-sm text-center md:text-left">
-      <img src="/destinariologo2.png" alt="Destinario Logo" class="w-70 mb-4 items-center" />
+    <!-- fondo / imagen izquierda -->
+    <div
+      class="absolute left-0 top-[21px] w-[1211px] h-[1003px] bg-cover bg-left"
+      style="background-image: url('/prueba.png');q"
+    ></div>
 
-      <p class="text-[#604646] font-[Asul] font-medium text-bold text-lg leading-relaxed">
-        Regístrate y obtendrás guías turísticas para visitar en México durante el mundial de futbol 2026.
-      </p>
+    <!-- panel derecho -->
+    <div
+      class="absolute top-0 right-0 w-[813px] h-screen bg-white rounded-l-[187px] overflow-hidden shadow-xl"
+    >
+      <div
+        class="absolute left-1/2 -translate-x-1/2 top-[29px] w-[530px] flex flex-col items-center gap-[24px] scale-95"
+      >
+        <!-- encabezado -->
+        <div class="w-[405px] flex flex-col items-center gap-[16px]">
+          <img
+            src="/destinariologo1.png"
+            alt="Logo"
+            class="w-[121px] h-[121px] object-contain"
+          />
 
-      <div class="w-full mt-10 hidden md:block">
-         <img src="/grafico registro.png" alt="Portada" class="w-200 mb-4 items-center" />
+          <div class="w-full text-center text-[#FF7608] text-[36px] font-bold font-[Nunito_Sans]">
+            Crea una cuenta
+          </div>
+
+          <div class="w-full text-center text-[#B8BEB8] text-[20px] font-normal font-[Nunito_Sans] leading-snug">
+            ¡Regístrate y obtendrás guías turísticas para visitar en México durante el mundial de fútbol 2026!
+          </div>
+        </div>
+
+        <!-- formulario -->
+        <form class="w-full flex flex-col gap-[24px]">
+
+          <div class="w-full flex flex-col gap-[11px]">
+            <label class="text-black text-[16px] font-bold font-['Nunito_Sans']">
+              Nombre/s
+            </label>
+            <input
+              type="text"
+              class="w-full h-[39px] px-[10px] rounded-[9px] border border-black/15 bg-transparent outline-none text-black"
+            />
+          </div>
+
+          <div class="w-full flex flex-col gap-[11px]">
+            <label class="text-black text-[16px] font-bold font-['Nunito_Sans']">
+              Apellidos
+            </label>
+            <input
+              type="text"
+              class="w-full h-[39px] px-[10px] rounded-[9px] border border-black/15 bg-transparent outline-none text-black"
+            />
+          </div>
+
+          <div class="w-full flex flex-col gap-[11px]">
+            <label class="text-black text-[16px] font-bold font-['Nunito_Sans']">
+              Correo electrónico
+            </label>
+            <input
+              type="email"
+              class="w-full h-[39px] px-[10px] rounded-[9px] border border-black/15 bg-transparent outline-none text-black"
+            />
+          </div>
+
+          <div class="w-full flex flex-col gap-[11px]">
+            <label class="text-black text-[16px] font-bold font-['Nunito_Sans']">
+              Contraseña
+            </label>
+            <input
+              type="password"
+              class="w-full h-[39px] px-[10px] rounded-[9px] border border-black/15 bg-transparent outline-none text-black"
+            />
+          </div>
+
+          <div class="w-full flex flex-col gap-[11px]">
+            <label class="text-black text-[16px] font-bold font-['Nunito_Sans']">
+              Ubicación
+            </label>
+
+            <div class="relative w-full">
+              <input
+                type="text"
+                class="w-full h-[39px] px-[10px] pr-[40px] rounded-[9px] border border-black/15 bg-transparent outline-none text-black"
+              />
+
+              <div
+                class="absolute right-[10px] top-1/2 -translate-y-1/2 w-[16px] h-[16px] bg-[#F6C7A2]"
+                style="mask-image: url('/Iconos/search.svg'); mask-repeat: no-repeat; mask-size: contain; -webkit-mask-image: url('/Iconos/search.svg'); -webkit-mask-repeat: no-repeat; -webkit-mask-size: contain;"
+              ></div>
+            </div>
+          </div>
+
+          <div class="flex justify-center pt-2">
+            <RouterLink to="/principal"
+            class="w-[161px] h-[50px] bg-[#00BF63] shadow-md rounded-[50px] text-white text-[24px] font-semibold font-['Nunito_Sans'] hover:scale-105 transition cursor-pointer flex items-center justify-center"
+            >
+              Registrar
+            </RouterLink>
+          </div>
+        </form>
       </div>
     </div>
 
-    <div class="bg-transparent w-full max-w-xl">
-      <h1 class="text-[#FF7608] text-3xl font-bold font-[Nunito] text-center mb-10 p-10">Crear una cuenta</h1>
-
-      <form @submit.prevent class="grid grid-cols-2 gap-x-6 gap-y-4  font-[Nunito] text-xl">
-
-        <div class="flex flex-col">
-          <label class="text-[#604646] font-bold mb-1 ml-2">Nombre(s)</label>
-          <input
-            class="w-full rounded-full border-none bg-[#FDF0D9] p-3 outline-none placeholder:text-[#604646]/50 shadow-sm font-[Nunito] text-xl text-[#604646]"
-            type="text" placeholder="Nombre" />
-        </div>
-
-        <div class="flex flex-col">
-          <label class="text-[#604646] font-bold mb-1 ml-2">Apellidos</label>
-          <input type="text"
-            class="w-full rounded-full border-none bg-[#FDF0D9] p-3 outline-none placeholder:text-[#604646]/50 shadow-sm font-[Nunito] text-xl text-[#604646]"
-            placeholder="Apellidos" />
-        </div>
-
-        <div class="flex flex-col">
-          <label class="text-[#604646] font-bold mb-1 ml-2">Correo electrónico</label>
-          <input
-            class="w-full rounded-full border-none bg-[#FDF0D9] p-3 outline-none placeholder:text-[#604646]/50 shadow-sm font-[Nunito] text-xl text-[#604646]"
-            type="mail" placeholder="Correo" />
-        </div>
-
-        <div class="flex flex-col">
-          <label class="text-[#604646] font-bold mb-1 ml-2">Contraseña</label>
-          <input type="password"
-            class="w-full rounded-full border-none bg-[#FDF0D9] p-3  outline-none placeholder:text-[#604646]/50 shadow-sm font-[Nunito] text-xl text-[#604646]"
-            placeholder="Contraseña" />
-        </div>
-
-        <div class="flex flex-col col-span-2 relative">
-          <label class="text-[#604646] font-bold mb-1">Ubicación</label>
-          <div class="relative">
-            <input
-              class="w-full rounded-full border-none bg-[#FDF0D9] p-3 outline-none placeholder:text-[#604646]/50 shadow-sm font-[Nunito] text-xl text-[#604646]"
-              type="text" placeholder="Buscar Ubicación" />
-            <span class="absolute right-3 top-3 text-[#604646]/50">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </span>
-          </div>
-        </div>
-        
-        <div class="col-span-2 flex justify-center mt-8 p-5">
-           <router-link to="/principal" class="flex text-center items-center"> <!--navegacion por ahora-->
-          <BotonBase text="Registrar" />
-        </router-link>
-
-        </div>
-       
-        
-      </form>
-    </div>
-
-  </div>
-
+  </section>
 </template>
