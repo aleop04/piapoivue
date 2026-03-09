@@ -17,47 +17,66 @@ const buscar = () => {
 </script>
 
 <template>
-  <nav class="flex items-center justify-between sticky top-0 p-5  z-50 bg-[#FFEBC9] z-1000">
+  <nav class="w-full h-[125px] bg-[#FF7608] shadow-[0px_3px_5.3px_rgba(0,0,0,0.25)] overflow-hidden flex items-center justify-center">
+    <div class="w-[1327px] h-[81px] flex items-center justify-center gap-[63px]">
 
-    <RouterLink to="/principal" class="flex items-center gap-2">
-      <img src="/public/destinariologo2.png" alt="Logo" class="h-12" />
-      <img src="/public/destinariologo1.png" alt="Logo" class="h-18" />
-    </RouterLink>
-
-
-    <div class="search-container w-[800px] relative">
-      <input
-        v-model="busqueda"
-        @keyup.enter="buscar"
-        class="w-full rounded-full border-none bg-[#FDF0D9] p-3 text-center outline-none placeholder:text-[#604646]/50 shadow-sm font-[Nunito_Sans] text-xl text-[#604646]"
-        type="text"
-        placeholder="Buscar..."
-      />
-    </div>
-
-
-    <div class="navbar-right p-5 flex items-center gap-11">
-
-      <RouterLink to="/agregar" class="icon-btn" title="Agregar">
-        <div class="h-8 w-8 bg-[#FF7608]"
-          style="mask-image: url('/Iconos/plus-circle.svg'); mask-repeat: no-repeat; mask-size: contain; -webkit-mask-image: url('/Iconos/plus-circle.svg'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat;">
-        </div>
+      <!-- logos -->
+      <RouterLink to="/principal" class="flex items-center">
+        <img
+          src="/destinariologo3.png"
+          alt="Logo texto"
+          class="w-[258px] h-[48px] object-contain"
+        />
+        <img
+          src="/destinariologo1.png"
+          alt="Logo icono"
+          class="w-[74px] h-[74px] object-contain"
+        />
       </RouterLink>
 
-      
-      <RouterLink to="/chats" class="icon-btn" title="Chats">
-        <div class="h-8 w-8 bg-[#FF7608]"
-          style="mask-image: url('/Iconos/chat.svg'); mask-repeat: no-repeat; mask-size: contain; -webkit-mask-image: url('/Iconos/chat.svg'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat;">
-        </div>
-      </RouterLink>
+      <!-- barra de búsqueda -->
+      <div class="w-[665px] h-[34px] px-[10px] rounded-[9px] border border-[#FFEBC9] flex items-center gap-[10px] bg-transparent">
+        <input
+          v-model="busqueda"
+          @keyup.enter="buscar"
+          type="text"
+          placeholder="Buscar..."
+          class="flex-1 bg-transparent outline-none text-[#FFEBC9] placeholder:text-[#FFEBC9]/70 font-[Nunito_Sans] text-[16px]"
+        />
 
-      <RouterLink to="/perfil" class="icon-btn" title="Perfil">
-        <div class="h-8 w-8 bg-[#FF7608]"
-          style="mask-image: url('/Iconos/person-circle.svg'); mask-repeat: no-repeat; mask-size: contain; -webkit-mask-image: url('/Iconos/person-circle.svg'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat;">
-        </div>
-      </RouterLink>
-      
+        <button
+          type="button"
+          @click="buscar"
+          class="w-[16px] h-[16px] bg-[#F6C7A2] cursor-pointer"
+          style="mask-image: url('/Iconos/search.svg'); mask-repeat: no-repeat; mask-size: contain; -webkit-mask-image: url('/Iconos/search.svg'); -webkit-mask-repeat: no-repeat; -webkit-mask-size: contain;"
+        ></button>
+      </div>
+
+      <!-- iconos derecha -->
+      <div class="w-[204px] h-[43px] flex items-center gap-[30px]">
+
+        <RouterLink to="/agregar" class="w-[48px] h-[48px] flex items-center justify-center">
+          <div
+            class="w-[36px] h-[36px] bg-[#FFEBC9]"
+            style="mask-image: url('/Iconos/plus-circle.svg'); mask-repeat: no-repeat; mask-size: contain; -webkit-mask-image: url('/Iconos/plus-circle.svg'); -webkit-mask-repeat: no-repeat; -webkit-mask-size: contain;"
+          ></div>
+        </RouterLink>
+
+        <RouterLink to="/chats" class="w-[48px] h-[48px] flex items-center justify-center">
+          <div
+            class="w-[36px] h-[36px] bg-[#FFEBC9]"
+            style="mask-image: url('/Iconos/chat.svg'); mask-repeat: no-repeat; mask-size: contain; -webkit-mask-image: url('/Iconos/chat.svg'); -webkit-mask-repeat: no-repeat; -webkit-mask-size: contain;"
+          ></div>
+        </RouterLink>
+
+        <RouterLink to="/perfil" class="w-[48px] h-[48px] flex items-center justify-center">
+          <div
+            class="w-[36px] h-[36px] bg-[#FFEBC9]"
+            style="mask-image: url('/Iconos/person-circle.svg'); mask-repeat: no-repeat; mask-size: contain; -webkit-mask-image: url('/Iconos/person-circle.svg'); -webkit-mask-repeat: no-repeat; -webkit-mask-size: contain;"
+          ></div>
+        </RouterLink>
+
+      </div>
     </div>
   </nav>
-  
 </template>
